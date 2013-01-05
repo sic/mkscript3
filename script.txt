@@ -1,0 +1,170 @@
+
+!  'MKSCRIPT', 'vers 6.1, Jul 2003'
+!* Don't delete this header, MkScript depends on it
+!  'Logging ON  Scan'
+!   16 entries.
+!    TEMP1   TEMP2   STEPS    FIELD1 FIELD2 -STEP-  EVENTS
+! 775.000 775.000   0.000      -1.0    -1.0     0.0   2.0
+!  -1.000  -1.000   0.000      -1.0    -1.0     0.0   2.0
+! 725.000 725.000   0.000      -1.0    -1.0     0.0   2.0
+!  -1.000  -1.000   0.000      -1.0    -1.0     0.0   2.0
+! 675.000 675.000   0.000      -1.0    -1.0     0.0   2.0
+!  -1.000  -1.000   0.000      -1.0    -1.0     0.0   2.0
+! 625.000 625.000   0.000      -1.0    -1.0     0.0   2.0
+!  -1.000  -1.000   0.000      -1.0    -1.0     0.0   2.0
+! 575.000 575.000   0.000      -1.0    -1.0     0.0   2.0
+!  -1.000  -1.000   0.000      -1.0    -1.0     0.0   2.0
+! 525.000 525.000   0.000      -1.0    -1.0     0.0   2.0
+!  -1.000  -1.000   0.000      -1.0    -1.0     0.0   2.0
+! 475.000 475.000   0.000      -1.0    -1.0     0.0   2.0
+!  -1.000  -1.000   0.000      -1.0    -1.0     0.0   2.0
+! 425.000 425.000   0.000      -1.0    -1.0     0.0   2.0
+!  -1.000  -1.000   0.000      -1.0    -1.0     0.0   2.0
+!* End of MkScript header
+
+ Mkscript temperature logging.
+ET TEMP/LOG/TLOG
+
+ Mkscript entry No.   1
+ET TEMP/SET=775.000
+ET LABEL/TEMP=775.000
+AIT/TEMP
+ET TEMP/KILL
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.   2
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.   3
+ET TEMP/SET=725.000
+ET LABEL/TEMP=725.000
+AIT/TEMP
+ET TEMP/KILL
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.   4
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.   5
+ET TEMP/SET=675.000
+ET LABEL/TEMP=675.000
+AIT/TEMP
+ET TEMP/KILL
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.   6
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.   7
+ET TEMP/SET=625.000
+ET LABEL/TEMP=625.000
+AIT/TEMP
+ET TEMP/KILL
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.   8
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.   9
+ET TEMP/SET=575.000
+ET LABEL/TEMP=575.000
+AIT/TEMP
+ET TEMP/KILL
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.  10
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.  11
+ET TEMP/SET=525.000
+ET LABEL/TEMP=525.000
+AIT/TEMP
+ET TEMP/KILL
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.  12
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.  13
+ET TEMP/SET=475.000
+ET LABEL/TEMP=475.000
+AIT/TEMP
+ET TEMP/KILL
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.  14
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.  15
+ET TEMP/SET=425.000
+ET LABEL/TEMP=425.000
+AIT/TEMP
+ET TEMP/KILL
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE
+
+ Mkscript entry No.  16
+EW
+TOP RUN/AFTER=  2.0
+AIT/MACQ
+TOP RUN
+AVE

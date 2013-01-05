@@ -1,0 +1,98 @@
+# 'MKSCRIPT', 'vers 7'
+# ** Don't delete this header, MkScript depends on it
+#
+# 10 entries
+#	TEMP1	TEMP2	-STEP-	FIELD1	FIELD2	-STEP-	CUSTOM	EVENTS
+#	1							KEEP	10
+#	2								10
+#	3	1.0							10
+#	4	1.0	20.0	2.5					10
+#	5	0.0	-10.0	-2.0					10
+#	6	-120.0			1.0				20
+#	7	-120.0			1.0	10.0	5.0		20
+#	8	-120.0	0	50	1.0	10.0	5.0		20
+#	9				1				23
+#	10				1	10	2		23
+# ** End of MkScript header
+PROCEDURE runscript;
+LOCAL i j myTemp myField;
+#
+# MkScript3 entry number 1
+WAITFOR events=10;
+END;
+#
+# MkScript3 entry number 2
+BEGIN;
+WAITFOR events=10;
+END;
+#
+# MkScript3 entry number 3
+CSET TEMP=1.0;
+BEGIN;
+WAITFOR events=10;
+END;
+#
+# MkScript3 entry number 4
+LOOP i FROM 1 TO 8;
+  myTemp = 1 + (i-1)*2.5;
+  CSET TEMP=myTemp;
+  BEGIN;
+  WAITFOR events=10;
+  END;
+ENDLOOP;
+#
+# MkScript3 entry number 5
+LOOP i FROM 1 TO 6;
+  myTemp = 0 + (i-1)*-2;
+  CSET TEMP=myTemp;
+  BEGIN;
+  WAITFOR events=10;
+  END;
+ENDLOOP;
+#
+# MkScript3 entry number 6
+CSET TEMP=-120.0;
+CSET FIELD=1.0;
+BEGIN;
+WAITFOR events=20;
+END;
+#
+# MkScript3 entry number 7
+CSET TEMP=-120.0;
+LOOP j FROM 1 TO 2;
+  myField = 1 + (j-1)*5;
+  CSET FIELD=myField;
+  BEGIN;
+  WAITFOR events=20;
+  END;
+ENDLOOP;
+#
+# MkScript3 entry number 8
+LOOP i FROM 1 TO 3;
+  myTemp = -120 + (i-1)*50;
+  CSET TEMP=myTemp;
+  LOOP j FROM 1 TO 2;
+    myField = 1 + (j-1)*5;
+    CSET FIELD=myField;
+    BEGIN;
+    WAITFOR events=20;
+    END;
+  ENDLOOP;
+ENDLOOP;
+#
+# MkScript3 entry number 9
+CSET FIELD=1;
+BEGIN;
+WAITFOR events=23;
+END;
+#
+# MkScript3 entry number 10
+LOOP j FROM 1 TO 5;
+  myField = 1 + (j-1)*2;
+  CSET FIELD=myField;
+  BEGIN;
+  WAITFOR events=23;
+  END;
+ENDLOOP;
+ENDPROCEDURE;
+
